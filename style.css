@@ -1,0 +1,559 @@
+/*英文字體 Berkshire Swash*/
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+/*顏色
+    深 #4E4051  #A0849D #D3B3B8 #CEB1BE #E3DAE7  #fff9fb 淺
+*/ 
+
+/*目錄*/
+*{
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;  /* 垂直排列 */
+    align-items: center;     /* 水平置中 */
+    justify-content: center; /* 垂直置中 */
+    z-index: 10;
+    position: relative;
+}   
+
+
+header{
+    text-align: center;
+    font-size: 20px;
+    color: #fff9fb;
+    font-family: 'Berkshire Swash', cursive;
+    font-weight: bolder;
+    margin: 0px;
+    padding: 40px;
+}
+nav{
+    text-align: center;
+}
+nav a{
+    background-color: #fff9fb;
+    border-radius: 15px;
+    border: 5px;
+    color: #CEB1BE;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: larger;
+    font-weight: bold;
+    padding: 20px 40px;
+    margin: 20px 30px;
+    display: inline-block;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #E3DAE7;
+    color: #A0849D;
+}
+/*txt*/
+.txt_1 {
+    color: #A0849D;
+    font-size: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transition: transform 3s ease;
+}
+
+.txt_1:hover {
+    animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+.txt_2{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color: #755573;
+}
+.txt_3{
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    line-height: 40px;
+    color: #A0849D;
+    padding: auto;
+}
+.logo {
+    float: center;
+}
+
+h3{
+    color: #5f465d;
+}
+
+/*背景動態*/
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+body {
+    height: 2000px;
+    width: 100%;
+    margin: 0;
+    background: #fff9fb;
+    animation: bgColorChange 15s linear infinite;
+}
+
+@keyframes bgColorChange {
+    0% { background: #d3a3b3; }
+    25% { background: #bd8a9b; }
+    50% { background: #815669; }
+    75% { background: #b67f88; }
+    100% { background: #d4aeba; }
+}
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* 雪花不影響點擊 */
+    z-index: 1;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -50px;  /* 初始位置在畫面上方 */
+    color: white;
+    user-select: none;
+    pointer-events: none;
+    font-size: 1em;
+    opacity: 0.8;
+    will-change: transform; /* 提升動畫效能 */
+    mix-blend-mode: lighten;
+}
+
+/*關於我*/
+.about{
+    width: 900px;
+    height: 500px;
+    background-color: #fff9fb;
+    border-radius: 20px;
+    border: 5px;
+    padding: 30px 30px;
+    margin: 20px auto;
+    font-family: 'Berkshire Swash', cursive;
+}
+.about:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+.about:not(:hover) {
+    transition: 0.5s ease-in-out;
+}
+
+.image_1 {
+    float: left;
+    width: 300px;
+    height:300px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin: 30px 80px 160px 30px;
+    object-fit: contain;
+    background-color: #000;
+}
+
+.name_1 {
+    color: #fff;
+    padding: 100px 10px 10px 0px ;
+    font-size: 40px;
+    color:#776075;
+    font-family: 標楷體;
+}
+.table_1 {
+    font-weight: bold;
+    font-size: 23px;
+    text-align: left;
+    color: #A0849D;
+    padding: 20px auto;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+
+/*技能*/
+.skills {
+    width: 900px;
+    height: 500px;
+    background-color: #fff9fb;
+    border-radius: 20px;
+    border: 5px;
+    padding: 40px 40px;
+    margin: 20px auto;
+}
+.skills:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+.skills:not(:hover) {
+    transition: 0.5s ease-in-out;
+}
+
+.all_skills{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;   
+}
+
+/* 圓餅圖 */
+@property --percentage {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+@keyframes PA {
+    from {
+        --percentage: 0;
+    }
+}
+
+/*動態*/
+@keyframes PA_Ani {
+    from {
+        --percentage: 0;
+    }
+}
+
+.PA {
+    width: 150px;
+    aspect-ratio: 1;
+    display: inline-grid;
+    place-content: center;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman';
+    color: #4E4051;
+    position: relative;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+    transition: 0.3s ease-in-out;
+}
+
+.PA:hover {
+    animation-name: PA_Ani;
+    animation-play-state: running; 
+    transform: scale(1.15);
+}
+
+
+
+.PA:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: conic-gradient(var(--color) calc(var(--percentage) * 1%), #0000 0%), #bcacbe;
+    -webkit-mask-image: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 calc(100% - 10px));
+    mask-image: radial-gradient(farthest-side, #0000 calc(75% - 10px), #000 calc(75% - 10px));
+}
+
+
+.PA {
+    animation-name: PA;
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation: PA 2s forwards
+}
+
+.PA.ani {
+    animation-name: pieAni;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+
+/* 其他技能區塊 */
+.Other_Skill {
+    align-content: space-around;
+    margin: 0px;
+    padding-left: 20px;
+}
+
+/* 進度條底色 */
+.Moved_1, .Moved_2, .Moved_3 {
+    border-radius: 30px;
+    width: 350px;
+    height: 30px;
+    border: #4E4051;
+    background-color: #4E4051;
+}
+
+/* 動畫效果 */
+@keyframes AS_1Ani {
+    0% {
+        width: 5%;
+        background-color: #fff9fb;
+    }
+    100% {
+        width: 60%;
+        background-color: #A0849D;
+    }
+}
+@keyframes AS_2Ani {
+    0% {
+        width: 5%;
+        background-color: #fff9fb;
+    }
+    100% {
+        width: 75%;
+        background-color: #A0849D;
+    }
+}
+@keyframes AS_3Ani {
+    0% {
+        width: 5%;
+        background-color: #fff9fb;
+    }
+    100% {
+        width: 90%;
+        background-color: #A0849D;
+    }
+}
+
+/* 實際進度條 */
+.AS_1, .AS_2, .AS_3 {
+    height: 30px;
+    border-radius: 15px;
+    width: 0%; /* 初始寬度 */
+}
+
+
+.Moved_1 .AS_1 { animation: AS_1Ani 2s forwards; }
+.Moved_2 .AS_2 { animation: AS_2Ani 2s forwards; }
+.Moved_3 .AS_3 { animation: AS_3Ani 2s forwards; }
+
+.Moved_1:hover .AS_1 {
+    animation: bar 0.1s ease-out;
+    border-right-width: 0px;
+}
+
+.Moved_2:hover .AS_2 {
+    animation: bar 0.1s ease-out;
+    border-right-width: 0px;
+}
+
+.Moved_3:hover .AS_3 {
+    animation: bar 0.1s ease-out;
+    border-right-width: 0px; 
+}
+
+.Other_Skill:hover {
+    animation: bar 0.1s ease-out;
+    border-right-width: 0px;
+}
+
+
+/*S_EX*/
+.S_experience{
+    width: 900px;
+    height: auto    ;
+    background-color: #fff9fb;
+    border-radius: 20px;
+    border: 5px;
+    padding: 40px 40px;
+    margin: 20px auto;
+}
+
+.S_experience:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+.S_experience:not(:hover) {
+    transition: 0.5s ease-in-out;
+}
+
+.block{
+   display: flex;              
+  align-items: center;         
+  justify-content: space-between;
+  gap: 40px;                    
+  margin-bottom: 60px;
+  
+}
+
+
+
+/*圖片*/
+/*漸入動畫*/
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.button a {  
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: bold;
+    background-color: #0040E0;
+    font-family: Arial;
+    color: #fff;
+    text-decoration: none; 
+    border-radius: 20px;
+    transition: background-color 0.3s; 
+}
+
+.button a:hover {
+    background-color: #003fe0c4;
+}
+
+.image-slider {
+    position: relative;
+    width: 45%;    
+    height: 320px;    
+    border-radius: 10px;
+    overflow: hidden;  
+    background-color: #000;
+    display: flex;          
+    justify-content: center;
+    align-items: center;   
+}
+
+.image-slider img ,.photo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;  
+    display: block;
+    object-fit: contain; 
+    object-position: center; 
+}
+
+.photos {
+    display: flex;
+    overflow: hidden;
+}
+
+
+.photo:first-child {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* 去除底色 */
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    padding: 15px; /* 内邊距 */
+    width: 40px; 
+    height: 60px; 
+    font-size: 30px;
+}
+
+.prev {
+left: 0;
+}
+
+.next {
+right: 0;
+}
+  
+.prev:hover,
+.next:hover {
+    transition: 0.3s ease-in-out;
+    color: #373A40;
+}
+
+.text-block {
+  width: 45%;           /* 右半邊文字 */
+  font-family: Arial, sans-serif;
+  float: right;
+}
+
+
+
+
+/*illu*/
+.Illustration{
+    width: 900px;
+    height: auto    ;
+    background-color: #fff9fb;
+    border-radius: 20px;
+    border: 5px;
+    padding: 40px 40px;
+    margin: 20px auto;
+}
+
+.Illustration:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+.Illustration:not(:hover) {
+    transition: 0.5s ease-in-out;
+}
+
+
+.image-slider2 {
+    position: relative;
+    width: 100%;    
+    height: 600px;    
+    border-radius: 10px;
+    overflow: hidden;  
+    background-color: #000;
+    display: flex;          
+    justify-content: center;
+    align-items: center;   
+}
+
+.image-slider2 img ,.photo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;  
+    display: block;
+    object-fit: contain; 
+    object-position: center; 
+}
+
+.photos2 {
+    display: flex;
+    overflow: hidden;
+}
+
+
+.photo:first-child {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* 去除底色 */
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    padding: 15px; /* 内邊距 */
+    width: 40px; 
+    height: 60px; 
+    font-size: 30px;
+}

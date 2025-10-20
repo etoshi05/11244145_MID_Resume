@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shootingstar.css">
+</head>
+<body> 
+        <!--提醒自己用:nav導航  section章節-->
+        <!-- 目錄 -->
+    <div id="snow-container"></div>
+    <div class="container">
+        <header>
+            <h1 class="title_1">My Resume</h1>
+            <nav>
+                <a href="#about" class="txt_1">About</a>
+                <a href="#skills" class="txt_1">Skills</a>
+                <a href="#S_experience" class="txt_1">School Experience</a>
+                <a href="#Illustration" class="txt_1">Illustration</a>
+            </nav>
+        </header>
+        
+        <!-- 關於我 -->
+        <section id="about" class="about">
+            <div>
+                <img src="image/Ab/002.jpg" class="image_1"/>
+            </div>
+            <div>
+                <table class="table_1">
+                        <tr>
+                            <th colspan="3" class="name_1">
+                                林子庭
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Birthday&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                            <td colspan="2">
+                                2005/01/18
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                            <td colspan="2">
+                                New Taipei City
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Personality&nbsp;
+                            </td>
+                            <td colspan="2">
+                                內向、害羞
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Interest&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </td>
+                            <td>
+                                繪畫、動漫、聽音樂
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">
+                                Heart First, Everything Follows
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+        </section>
+
+
+        <!--技能-->
+        <section id="skills" class="skills">
+            <div class="all_skills">
+                <div> 
+                    <h3>程式能力 Programming ability</h3>
+                    <div class="PA" style="--color:#E3DAE7; --percentage:70;">Python</div>
+                    <div class="PA" style="--color:#E3DAE7; --percentage:50;">Java</div>
+                    <div class="PA" style="--color:#E3DAE7; --percentage:60;">SQL </div>
+                    <div class="PA" style="--color:#E3DAE7; --percentage:80;">HTML</div>
+                </div>
+                <div class="Other_Skill">
+                    <h3>其他技能 Other Ability</h3>
+                    <p class="txt_1">插畫設計 Illustration Design</p>
+                    <div class="Moved_1">
+                        <div class="AS_1"></div> 
+                    </div>
+                    <p class="txt_1">前端設計 Front-End Design</p>
+                    <div class="Moved_2">
+                    <div class="AS_2"></div> 
+                    </div>
+                        <p class="txt_1">簡報製作 Presentation Design</p>
+                        <div class="Moved_3">
+                            <div class="AS_3"></div> 
+                        </div>             
+                    </div>
+                </div>
+        </section>
+
+
+        <!--學校經歷-->
+        <section id="S_experience" class="S_experience">
+            <h3>學校經歷 School Experience</h3>
+            <!--經歷1-->
+            <article class="block">
+                <div class="image-slider">
+                    <button class="prev" onclick="prevSlide(this.parentElement.parentElement)">&#10094;</button>
+                    <div class="photos">
+                        <img src="image/EX_1/001.png" alt="photo1" class="photo">
+                        <img src="image/EX_1/002.png" alt="photo2" class="photo">
+                        <img src="image/EX_1/003.png" alt="photo3" class="photo">
+                        <img src="image/EX_1/004.png" alt="photo3" class="photo">
+                    </div>
+                    <button class="next" onclick="nextSlide(this.parentElement.parentElement)">&#10095;</button>
+                </div>
+                <div class="text-block">
+                    <P class="txt_2">管理學 犬行天下：志工與管理之道</P>
+                    <span class="txt_3">
+                        在活動中，我學習到了許多關於流浪犬處理的方式，並且了解到流浪犬問題的形成與社會結構和人類行為息息相關，意識到自己的行為可能會對動物的命運有著重要的影響，因此在日後的日常生活中應該更加謹慎地對待動物。
+                    </span>
+                </div>
+            </article>
+            <!--經歷2-->
+            <article class="block">
+                <div class="image-slider">
+                    <button class="prev" onclick="prevSlide(this.parentElement.parentElement)">&#10094;</button>
+                    <div class="photos">
+                        <img src="image/EX_2/001.jpg" alt="photo1" class="photo">
+                        <img src="image/EX_2/002.jpg" alt="photo2" class="photo">
+                        <img src="image/EX_2/003.jpg" alt="photo3" class="photo">
+                    </div>
+                    <button class="next" onclick="nextSlide(this.parentElement.parentElement)">&#10095;</button>
+                </div>
+                <div class="text-block">
+                    <P class="txt_2">熱舞社 參與大學熱舞社 期初小成發 
+                        <a href="https://www.youtube.com/watch?v=lwXPHTx6ttA" target="_blank">
+                        <img src="image/logo/YT.png" alt="YT" width="30" height="30" class="logo">
+                        </a>
+                    </P>
+                    <span class="txt_3">
+                        參加大學熱舞社的期初小成果發表讓我感受到團隊合作的重要性。排練過程中，每個動作都需要反覆練習，也學會了如何互相鼓勵與修正。站上舞台的瞬間，所有努力都化為自信與成就感，讓我更加熱愛舞蹈。
+                    </span>
+
+                </div>
+            </article>
+            <!--經歷3-->
+            <article class="block">
+                <div class="image-slider">
+                    <button class="prev" onclick="prevSlide(this.parentElement.parentElement)">&#10094;</button>
+                    <div class="photos">
+                        <img src="image/EX_3/001.jpg" alt="photo1" class="photo">
+                        <img src="image/EX_3/002.jpg" alt="photo2" class="photo">
+                        <img src="image/EX_3/003.jpg" alt="photo3" class="photo">
+                        <img src="image/EX_3/004.png" alt="photo3" class="photo">
+                    </div>
+                    <button class="next" onclick="nextSlide(this.parentElement.parentElement)">&#10095;</button>
+                </div>
+                <div class="text-block">
+                    <P class="txt_2">環境永續樂桃桃</P>
+                    <span class="txt_3">
+                        藉由桃園江夏堂的環境介紹、客家文化，點出埤塘的重要性，再帶出逐漸被人遺忘的「塘函」設施，加上實體的模型讓參與者更加直觀的理解。希望能將桃園江夏堂的故事分享給大家，並藉此宣傳塘函的構造、使用原理，以及對傳統客家文化的重要性。
+                    </span>
+                </div>
+            </article>
+        </section>
+
+        <!--插畫設計-->
+        <section id="Illustration" class="Illustration">
+            <h3>插畫設計 Illustration</h3>
+            <div class="block">
+            <div class="image-slider2">
+                <button class="prev" onclick="prevSlide(this.parentElement.parentElement)">&#10094;</button>
+                <div class="photos2">
+                    <img src="image/Illu/001.jpg" alt="ill_1" class="photo" >
+                    <img src="image/Illu/002.jpg" alt="ill_2" class="photo">
+                    <img src="image/Illu/003.png" alt="ill_3" class="photo">
+                    <img src="image/Illu/004.png"  alt="ill_4" class="photo">
+                    <img src="image/Illu/005.png"  alt="ill_5" class="photo">
+                    <img src="image/Illu/006.png"  alt="ill_6" class="photo">
+                </div>
+                <button class="next" onclick="nextSlide(this.parentElement.parentElement)">&#10095;</button>
+            </div>
+        </div>
+        </section>
+
+        <!--底下連結-->
+        <footer>
+            <a href="https://www.instagram.com/zitin.__/" title="instagram"><img src="image/logo/instagram.png" alt="instagram" width="40" height="40"></a>
+            <a href="https://www.facebook.com/520yuuki/?locale=zh_TW" title="facebook"><img src="image/logo/facebook.png" alt="facebook" width="40" height="40"></a>
+            <a href="mailto:ting94118@gmail.com" title="gmail"><img src="image/logo/gmail.png" alt="gmail" width="40" height="40"></a>
+        </footer>
+    </div>
+
+
+
+    <!--js-->
+    <script>
+        function showSlide(container, index) {
+            const photos = container.querySelectorAll('.photo');
+            photos.forEach(photo => photo.style.display = 'none');
+            photos[index].style.display = 'block';
+        }
+
+        function nextSlide(article) {
+            const photos = article.querySelectorAll('.photo');
+            let currentIndex = Array.from(photos).findIndex(p => p.style.display === 'block');
+            currentIndex = (currentIndex + 1) % photos.length;
+            showSlide(article, currentIndex);
+        }
+
+        function prevSlide(article) {
+            const photos = article.querySelectorAll('.photo');
+            let currentIndex = Array.from(photos).findIndex(p => p.style.display === 'block');
+            currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+            showSlide(article, currentIndex);
+        }
+        const bars = document.querySelectorAll('.Moved_1 .AS_1, .Moved_2 .AS_2, .Moved_3 .AS_3');
+
+            bars.forEach(bar => {
+                bar.parentElement.addEventListener('mouseenter', () => {
+                bar.style.animation = 'none';  // 先移除動畫
+                bar.offsetHeight;              // 觸發重繪
+                const aniName = bar.classList.contains('AS_1') ? 'AS_1Ani' :
+                                bar.classList.contains('AS_2') ? 'AS_2Ani' : 'AS_3Ani';
+                bar.style.animation = `${aniName} 2s forwards`;  // 重新啟動
+            });
+        });
+        const snowContainer = document.getElementById('snow-container');
+        const snowflakeCount = 50; // 雪花數量，可調整
+
+        function createSnowflake() {
+            const snowflake = document.createElement('span');
+            snowflake.classList.add('snowflake');
+    
+        // 隨機雪花符號
+                const snowSymbols = ['❄','❅','❆',"(◍ˊㅿˋ◍)","  (੭ ᐕ)੭*⁾⁾","♡"];
+                snowflake.textContent = snowSymbols[Math.floor(Math.random() * snowSymbols.length)];
+
+    // 隨機大小、透明度、初始水平位置
+            const size = Math.random() * 20 + 10; // 10px ~ 30px
+            snowflake.style.fontSize = `${size}px`;
+            snowflake.style.opacity = Math.random() * 0.5 + 0.5; // 0.5 ~ 1
+            snowflake.style.left = `${Math.random() * 100}%`;
+
+    // 隨機速度
+            const fallDuration = Math.random() * 5 + 5; // 5s ~ 10s
+            snowflake.style.animation = `fall ${fallDuration}s linear forwards`;
+
+    // 隨機左右搖擺
+            const drift = Math.random() * 100 - 50; // -50px ~ 50px
+            snowflake.style.setProperty('--drift', `${drift}px`);
+
+            snowContainer.appendChild(snowflake);
+
+    // 移除雪花以避免 DOM 堆積
+            setTimeout(() => {
+                snowflake.remove();
+                createSnowflake(); // 持續生成雪花
+            }, fallDuration * 1000);
+        }
+
+    // 定義 keyframes 動態加到 JS 中
+    const styleSheet = document.styleSheets[0];
+    styleSheet.insertRule(`
+    @keyframes fall {
+    0% { transform: translateY(0) translateX(0); }
+    100% { transform: translateY(110vh) translateX(var(--drift)); }
+    }
+    `, styleSheet.cssRules.length);
+
+// 初始化生成雪花
+    for (let i = 0; i < snowflakeCount; i++) {
+        setTimeout(createSnowflake, i * 200); // 間隔生成
+    }
+
+</script>
+</body>
+</html>
